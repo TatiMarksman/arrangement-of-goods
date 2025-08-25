@@ -3,7 +3,7 @@ import { products } from "./data/products";
 import "./App.css";
 
 function App() {
-  const [view, setView] = useState("grid");
+  const [view, setView] = useState("list"); // Varsayılan olarak list
   const [productsList, setProducts] = useState(products);
   const [sortOrder, setSortOrder] = useState("asc");
 
