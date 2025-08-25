@@ -8,6 +8,24 @@
   cursor: pointer;
 }
 
+.sort-controls {
+  margin: 20px 0;
+}
+
+.sort-controls button {
+  margin: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sort-controls button:hover {
+  background-color: #e0e0e0;
+}
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
