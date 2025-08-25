@@ -1,6 +1,6 @@
 # Arrangement of Goods 🛍️
 
-Build Status
+[![Build Passing](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/TatiMarksman/arrangement-of-goods)
 
 A modern React application for displaying and organizing products with advanced filtering and sorting capabilities built as part of the **Events & States** homework.
 
