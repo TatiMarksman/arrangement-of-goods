@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { products } from "./data/products";
+import "./App.css";
 
 function App() {
+  const [view, setView] = useState("grid"); // grid veya list
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Arrangement of Goods</h1>
+      <div className="view-toggle">
+        <button onClick={() => setView("grid")}>Grid View</button>
+        <button onClick={() => setView("list")}>List View</button>
+      </div>
+      <div className={view === "grid" ? "products-grid" : "products-list"}>
+        {products.map((product) => (
+          <div key={product.id} className="product-card">
+            <img src={product.image} alt={product.name} />
+            <h2>{product.name}</h2>
+            <p>${product.price}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
