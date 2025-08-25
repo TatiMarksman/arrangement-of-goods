@@ -8,6 +8,25 @@
   cursor: pointer;
 }
 
+.filter-controls {
+  margin: 20px 0;
+}
+
+.filter-controls button {
+  margin: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #e3f2fd;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  color: #1976d2;
+  transition: background-color 0.3s ease;
+}
+
+.filter-controls button:hover {
+  background-color: #bbdefb;
+}
+
 .sort-controls {
   margin: 20px 0;
 }
@@ -51,6 +70,13 @@
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+  text-transform: capitalize;
 }
 
 @media (max-width: 768px) {

@@ -11,12 +11,27 @@ function App() {
     setProducts(sorted);
   };
 
+  const filterProducts = (category) => {
+    if (category === 'all') {
+      setProducts(products);
+    } else {
+      const filtered = products.filter(product => product.category === category);
+      setProducts(filtered);
+    }
+  };
+
   return (
     <div className="App">
       <h1>Arrangement of Goods</h1>
       <div className="view-toggle">
         <button onClick={() => setView("grid")}>Grid View</button>
         <button onClick={() => setView("list")}>List View</button>
+      </div>
+      <div className="filter-controls">
+        <button onClick={() => filterProducts('all')}>All</button>
+        <button onClick={() => filterProducts('electronics')}>Electronics</button>
+        <button onClick={() => filterProducts('clothing')}>Clothing</button>
+        <button onClick={() => filterProducts('books')}>Books</button>
       </div>
       <div className="sort-controls">
         <button onClick={() => sortProducts('name')}>Sort by Name</button>
@@ -28,6 +43,7 @@ function App() {
             <img src={product.image} alt={product.name} />
             <h2>{product.name}</h2>
             <p>${product.price}</p>
+            <p className="category">{product.category}</p>
           </div>
         ))}
       </div>
